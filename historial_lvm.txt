@@ -1,0 +1,43 @@
+    1  ls -l
+    2  cd /home/vagrant
+    3  pwd
+    4  ls -l
+    5  git clone https://github.com/candelamelgarejo3-debug/TP2_Melgarejo_Candela.git
+    6  ls -l
+    7  cd TP2_Melgarejo_Candela/
+    8  ls -l
+    9  cd ..
+   10  fdisk -l
+   11  sudo fdisk
+   12  sudo fdisk -l
+   13  sudo fdisk /dev/sdb
+   14  sudo fdisk /dev/sdd
+   15  free
+   16  free -h
+   17  sudo mkswap /dev/sdd1
+   18  free -h
+   19  sudo swapon /dev/sdd1
+   20  free -h
+   21  sudo fdisk /dev/sdc
+   22  sudo wipefs -a /dev/sdc1
+   23  sudo pvcreate /dev/sdd2 /dev/sdd3 /dev/sdd5 /dev/sdd6 /dev/sdc1 /dev/sdc2
+   24  sudo pvs
+   25  sudo vgcreate vg_datos /dev/sdc1 /dev/sdd2
+   26  sudo vgs
+   27  sudo pvs
+   28  sudo vgcreate vg_wed /dev/sdc2
+   29  sudo pvs
+   30  sudo vgrename vg_wed vg_web
+   31  sudo pvs
+   32  sudo lvcreate -L 1G vg_web -n lv_wed1
+   33  sudo lvrename vg_web lv_wed1 lv_web1
+   34  sudo lvcreate -L 512M vg_web -n lv_web2
+   35  sudo lvcreate -L 512M vg_web -n lv_web3
+   36  sudo lvs
+   37  sudo pvs
+   38  sudo fdisk -l
+   39  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web1
+   40  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web2
+   41  sudo mkfs.ext4 /dev/mapper/vg_web-lv_web3
+   42  ls -l
+   43  cd TP2_Melgarejo_Candela/
